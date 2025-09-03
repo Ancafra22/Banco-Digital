@@ -1,13 +1,15 @@
 package com.example.bancodigital.presenter.auth.recover
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import com.example.bancodigital.R
+import androidx.fragment.app.Fragment
 import com.example.bancodigital.databinding.FragmentRecoverBinding
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
 
 class RecoverFragment : Fragment() {
     private var _binding: FragmentRecoverBinding? = null
