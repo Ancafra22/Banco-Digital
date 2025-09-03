@@ -65,7 +65,7 @@
                 tools:layout_editor_absoluteY="180dp" />
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit2"
@@ -80,7 +80,7 @@
                 tools:layout_editor_absoluteY="199dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/materialButton"
+                android:id="@+id/btnSend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"

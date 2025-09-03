@@ -52,6 +52,7 @@
                 tools:layout_editor_absoluteY="100dp" />
 
             <EditText
+                android:id="@+id/edtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit2"
@@ -75,7 +76,7 @@
                 tools:layout_editor_absoluteY="180dp" />
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit2"
@@ -99,7 +100,7 @@
                 tools:layout_editor_absoluteY="249dp" />
 
             <EditText
-                android:id="@+id/mobileNumber"
+                android:id="@+id/edtMobileNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit2"
@@ -123,7 +124,7 @@
                 tools:layout_editor_absoluteY="321dp" />
 
             <EditText
-                android:id="@+id/senha"
+                android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit2"
@@ -146,7 +147,7 @@
                 tools:layout_editor_absoluteY="396dp" />
 
             <EditText
-                android:id="@+id/confirmeSenha"
+                android:id="@+id/edtConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_edit2"
@@ -160,7 +161,7 @@
                 tools:layout_editor_absoluteY="415dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/sendButton"
+                android:id="@+id/btnSend"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_btn"

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.bancodigital.R
 import com.example.bancodigital.databinding.FragmentLoginBinding
 
@@ -12,7 +13,6 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 class LoginFragment : Fragment() {
-
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
@@ -24,6 +24,36 @@ class LoginFragment : Fragment() {
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initListeners()
+    }
+
+    //função de evento de clique do botão enviar
+    private fun initListeners (){
+        binding.btnLogin.setOnClickListener {
+            validadeData()
+        }
+    }
+
+    //função para recuperar e validar os dados digitados pelo usuário
+    private fun validadeData() {
+        //recuperando os dados digitados, tranformando em string e retirando os espaços em branco
+        val email = binding.edtEmail.text.toString().trim()
+        val password = binding.edtPassword.text.toString().trim()
+
+        if (email.isNotEmpty()) {
+            if (password.isNotEmpty()) {
+                Toast.makeText(requireContext(), "Login realizado com sucesso!", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
+                Toast.makeText(requireContext(), "Digite a sua senha", Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            Toast.makeText(requireContext(), "Digite seu email", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onDestroyView() {

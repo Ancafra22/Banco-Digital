@@ -1,13 +1,12 @@
-package com.example.bancodigital
+package com.example.bancodigital.presenter
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.bancodigital.R
 import com.example.bancodigital.databinding.ActivityMainBinding
-import com.google.firebase.auth.FirebaseAuthException
-import com.google.firebase.database.DatabaseReference
 
 class MainActivity : AppCompatActivity() {
 
