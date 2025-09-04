@@ -1,13 +1,15 @@
 package com.example.bancodigital.presenter.splash
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.bancodigital.R
+import androidx.fragment.app.Fragment
 import com.example.bancodigital.databinding.FragmentSplashBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class SplashFragment : Fragment() {
 
     private var _binding: FragmentSplashBinding? = null
