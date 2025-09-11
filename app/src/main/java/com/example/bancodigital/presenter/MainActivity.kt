@@ -7,11 +7,9 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.bancodigital.R
 import com.example.bancodigital.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.HiltAndroidApp
 
 
 @AndroidEntryPoint
-@HiltAndroidApp
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
