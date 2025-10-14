@@ -177,7 +177,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_gravity="center"
-                android:indeterminateTint="@color/color_default" />
+                android:indeterminateTint="@color/color_default"
+                android:visibility="invisible"
+                tools:visibility="visible" />
 
         </LinearLayout>
 
