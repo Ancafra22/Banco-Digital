@@ -29,7 +29,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Recuperar senha" />
+                    android:text="Recuperar senha"
+                    android:textColor="@color/color_default" />
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -41,6 +42,7 @@
             android:layout_margin="24dp"
             android:gravity="center"
             android:text="Digite seu e-mail e clique em enviar para receber um link de recuperação de senha."
+            android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
@@ -68,7 +70,7 @@
                 android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_edit2"
+                style="@style/Theme.EditText"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"

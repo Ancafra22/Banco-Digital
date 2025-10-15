@@ -30,7 +30,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Criar Conta" />
+                    android:text="Criar Conta"
+                    android:textColor="@color/color_default" />
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -55,14 +56,12 @@
                 android:id="@+id/edtName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_edit2"
+                style="@style/Theme.EditText"
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
                 android:hint="Digite seu nome"
-
                 android:padding="8dp"
-                android:textColorHint="@color/color_hint"
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="126dp" />
 
@@ -79,14 +78,13 @@
                 android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_edit2"
+                style="@style/Theme.EditText"
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
                 android:hint="Digite seu e-mail"
                 android:inputType="textEmailAddress"
                 android:padding="8dp"
-                android:textColorHint="@color/color_hint"
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="199dp" />
 
@@ -103,14 +101,13 @@
                 android:id="@+id/edtMobileNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_edit2"
+                style="@style/Theme.EditText"
                 android:drawableStart="@drawable/ic_mobile"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
                 android:hint="Digite seu telefone"
                 android:inputType="phone"
                 android:padding="8dp"
-                android:textColorHint="@color/color_hint"
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="268dp" />
 
@@ -127,13 +124,12 @@
                 android:id="@+id/edtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_edit2"
+                style="@style/Theme.EditText"
                 android:drawableStart="@drawable/ic_key"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
                 android:hint="Digite uma senha"
                 android:padding="8dp"
-                android:textColorHint="@color/color_hint"
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="345dp" />
 
@@ -150,13 +146,12 @@
                 android:id="@+id/edtConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_edit2"
+                style="@style/Theme.EditText"
                 android:drawableStart="@drawable/ic_key"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
                 android:hint="Confirme a senha"
                 android:padding="8dp"
-                android:textColorHint="@color/color_hint"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="415dp" />
 
