@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.bancodigital.presenter.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_navigation"
+            app:destination="@id/authentication" />
+    </fragment>
+    <navigation
+        android:id="@+id/authentication"
+        app:startDestination="@id/loginFragment">
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.example.bancodigital.presenter.auth.login.LoginFragment"
+            android:label="fragment_login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_loginFragment_to_recoverFragment"
+                app:destination="@id/recoverFragment" />
+            <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/recoverFragment"
+            android:name="com.example.bancodigital.presenter.auth.recover.RecoverFragment"
+            android:label="RecoverFragment" />
+        <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.example.bancodigital.presenter.auth.register.RegisterFragment"
+            android:label="RegisterFragment" />
+    </navigation>
+</navigation>

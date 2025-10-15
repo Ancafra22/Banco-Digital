@@ -129,6 +129,7 @@
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
                 android:hint="Digite uma senha"
+                android:inputType="textPassword"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="345dp" />
@@ -151,6 +152,7 @@
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
                 android:hint="Confirme a senha"
+                android:inputType="textPassword"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="415dp" />

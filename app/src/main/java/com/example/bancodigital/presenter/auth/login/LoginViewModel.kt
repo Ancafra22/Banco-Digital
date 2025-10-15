@@ -1,24 +1,23 @@
-package com.example.bancodigital.presenter.auth.register
+package com.example.bancodigital.presenter.auth.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.example.bancodigital.data.model.User
-import com.example.bancodigital.domain.auth.RegisterUsecase
+import com.example.bancodigital.domain.auth.LoginUsecase
 import com.example.bancodigital.util.StateView
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
 
 @HiltViewModel
-class RegisterViewModel @Inject constructor(
-    private val registerUsecase: RegisterUsecase
+class LoginViewModel @Inject constructor(
+    private val loginUsecase: LoginUsecase
 ) : ViewModel() {
-    fun register(user: User) = liveData(Dispatchers.IO) {
+    fun login(email: String, password: String) = liveData(Dispatchers.IO) {
         try {
             emit(StateView.Loading())
 
-            registerUsecase.invoke(user)
-            emit(StateView.Sucess(user))
+            loginUsecase.invoke(email, password)
+            emit(StateView.Sucess(null))
 
         } catch (ex: Exception) {
             emit(StateView.Error(ex.message))
