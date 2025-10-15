@@ -12,6 +12,11 @@
         <action
             android:id="@+id/action_splashFragment_to_navigation"
             app:destination="@id/authentication" />
+        <action
+            android:id="@+id/action_splashFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <navigation
         android:id="@+id/authentication"
@@ -36,5 +41,15 @@
             android:id="@+id/registerFragment"
             android:name="com.example.bancodigital.presenter.auth.register.RegisterFragment"
             android:label="RegisterFragment" />
+        <action
+            android:id="@+id/action_global_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
     </navigation>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.bancodigital.presenter.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>
