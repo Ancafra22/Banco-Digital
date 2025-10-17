@@ -99,7 +99,7 @@ class RegisterFragment : Fragment() {
                 is StateView.Error -> {
                     binding.progressBar.isVisible = false
                     Toast.makeText(
-                        requireContext(), "Registro realizado com sucesso!",
+                        requireContext(), "Erro ao cadastrar",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

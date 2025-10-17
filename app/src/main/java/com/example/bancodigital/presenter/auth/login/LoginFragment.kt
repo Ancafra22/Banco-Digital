@@ -5,10 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.bancodigital.R
 import com.example.bancodigital.databinding.FragmentLoginBinding
+import com.example.bancodigital.util.StateView
 import dagger.hilt.android.AndroidEntryPoint
 
 private const val ARG_PARAM1 = "param1"
@@ -20,6 +23,8 @@ class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+
+    private val loginViewModel: LoginViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -36,7 +41,7 @@ class LoginFragment : Fragment() {
     }
 
     //função de evento de clique do botão enviar
-    private fun initListeners (){
+    private fun initListeners() {
         binding.btnLogin.setOnClickListener {
             validadeData()
         }
@@ -56,13 +61,41 @@ class LoginFragment : Fragment() {
 
         if (email.isNotEmpty()) {
             if (password.isNotEmpty()) {
-                Toast.makeText(requireContext(), "Login realizado com sucesso!", Toast.LENGTH_SHORT)
-                    .show()
+
+                loginUser(email, password)
+
             } else {
                 Toast.makeText(requireContext(), "Digite a sua senha", Toast.LENGTH_SHORT).show()
             }
         } else {
             Toast.makeText(requireContext(), "Digite seu email", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun loginUser(email: String, password: String) {
+
+        loginViewModel.login(email, password).observe(viewLifecycleOwner) { stateView ->
+
+            when (stateView) {
+                is StateView.Loading -> {
+                    binding.progressBar.isVisible = true
+                }
+
+                is StateView.Sucess -> {
+                    binding.progressBar.isVisible = false
+
+                    findNavController().navigate(R.id.action_global_homeFragment)
+                }
+
+                is StateView.Error -> {
+                    binding.progressBar.isVisible = false
+                    Toast.makeText(
+                        requireContext(), "Email ou senha inválido",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
         }
     }
 
