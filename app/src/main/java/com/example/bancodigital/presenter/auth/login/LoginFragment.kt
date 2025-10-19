@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.bancodigital.R
 import com.example.bancodigital.databinding.FragmentLoginBinding
 import com.example.bancodigital.util.StateView
+import com.example.bancodigital.util.showBottomSheet
 import dagger.hilt.android.AndroidEntryPoint
 
 private const val ARG_PARAM1 = "param1"
@@ -38,6 +39,8 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initListeners()
+
+        showBottomSheet(message = "Test message")
     }
 
     //função de evento de clique do botão enviar
