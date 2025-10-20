@@ -4,4 +4,17 @@
     <!-- BottomSheet -->
     <string name="textTittleBottomSheet">Atenção</string>
     <string name="textButtonBottomSheet">Entendi</string>
+    <!-- Generic -->
+    <string name="name">Digite seu nome</string>
+    <string name="email">Digite o seu email</string>
+    <string name="emailSucess">Email enviado com sucesso</string>
+    <string name="mobileNumber">Digite o seu número de telefone</string>
+    <string name="password">Crie a sua senha</string>
+    <string name="confirmPassword">Confirme a sua senha</string>
+    <string name="criateError">Erro ao cadastrar, insira informações válidas</string>
+    <string name="criateSucess">Cadastro realizado com sucesso</string>
+    <string name="emailOrPasswordError">Email ou senha inválido</string>
+
+    <!-- Login -->
+    <string name="enterPassword">Digite a sua senha</string>
 </resources>

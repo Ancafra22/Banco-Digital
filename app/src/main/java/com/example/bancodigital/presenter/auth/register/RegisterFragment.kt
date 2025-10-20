@@ -4,15 +4,18 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import com.example.bancodigital.R
 import com.example.bancodigital.data.model.User
 import com.example.bancodigital.databinding.FragmentRegisterBinding
 import com.example.bancodigital.util.StateView
 import com.example.bancodigital.util.initToolbar
+import com.example.bancodigital.util.showBottomSheet
 import dagger.hilt.android.AndroidEntryPoint
+
 
 @AndroidEntryPoint
 class RegisterFragment : Fragment() {
@@ -61,21 +64,20 @@ class RegisterFragment : Fragment() {
                             registerUser(user)
 
                         }else{
-                            Toast.makeText(requireContext(), "Confirme a sua senha", Toast.LENGTH_SHORT)
-                                .show()
+                            showBottomSheet(message = getString(R.string.confirmPassword))
                         }
                     }else{
-                        Toast.makeText(requireContext(), "Crie a sua senha", Toast.LENGTH_SHORT).show()
+                        showBottomSheet(message = getString(R.string.password))
                     }
 
                 }else{
-                    Toast.makeText(requireContext(), "Digito o seu número de telefone", Toast.LENGTH_SHORT).show()
+                    showBottomSheet(message = getString(R.string.mobileNumber))
                 }
             } else {
-                Toast.makeText(requireContext(), "Digite o seu email", Toast.LENGTH_SHORT).show()
+                showBottomSheet(message = getString(R.string.email))
             }
         } else {
-            Toast.makeText(requireContext(), "Digite seu nome", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = getString(R.string.name))
         }
     }
 
@@ -90,18 +92,13 @@ class RegisterFragment : Fragment() {
 
                 is StateView.Sucess -> {
                     binding.progressBar.isVisible = false
-                    Toast.makeText(
-                        requireContext(), stateView.message,
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    findNavController().navigate(R.id.action_global_homeFragment)
+
                 }
 
                 is StateView.Error -> {
                     binding.progressBar.isVisible = false
-                    Toast.makeText(
-                        requireContext(), "Erro ao cadastrar",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    showBottomSheet(message = getString(R.string.criateError))
                 }
             }
 

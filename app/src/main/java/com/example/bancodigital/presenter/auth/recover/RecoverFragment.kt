@@ -4,13 +4,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.bancodigital.R
 import com.example.bancodigital.databinding.FragmentRecoverBinding
 import com.example.bancodigital.util.StateView
 import com.example.bancodigital.util.initToolbar
+import com.example.bancodigital.util.showBottomSheet
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -51,7 +52,7 @@ class RecoverFragment : Fragment() {
         if (email.isNotEmpty()) {
             recoverAccount(email)
         } else {
-            Toast.makeText(requireContext(), "Digite seu email", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = getString(R.string.email))
         }
     }
 
@@ -67,19 +68,12 @@ class RecoverFragment : Fragment() {
                 is StateView.Sucess -> {
                     binding.progressBar.isVisible = false
 
-                    Toast.makeText(
-                        requireContext(),
-                        "Email enviado com sucesso",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    showBottomSheet(message = getString(R.string.emailSucess))
                 }
 
                 is StateView.Error -> {
                     binding.progressBar.isVisible = false
-                    Toast.makeText(
-                        requireContext(), "Email ou senha inválido",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    showBottomSheet(message = getString(R.string.emailOrPasswordError))
                 }
             }
 

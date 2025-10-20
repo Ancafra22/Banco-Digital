@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -40,7 +39,6 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         initListeners()
 
-        showBottomSheet(message = "Test message")
     }
 
     //função de evento de clique do botão enviar
@@ -68,10 +66,12 @@ class LoginFragment : Fragment() {
                 loginUser(email, password)
 
             } else {
-                Toast.makeText(requireContext(), "Digite a sua senha", Toast.LENGTH_SHORT).show()
+
+                showBottomSheet(message = getString(R.string.enterPassword))
+
             }
         } else {
-            Toast.makeText(requireContext(), "Digite seu email", Toast.LENGTH_SHORT).show()
+            showBottomSheet(message = getString(R.string.email))
         }
     }
 
@@ -92,10 +92,7 @@ class LoginFragment : Fragment() {
 
                 is StateView.Error -> {
                     binding.progressBar.isVisible = false
-                    Toast.makeText(
-                        requireContext(), "Email ou senha inválido",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    showBottomSheet(message = getString(R.string.emailOrPasswordError))
                 }
             }
 
