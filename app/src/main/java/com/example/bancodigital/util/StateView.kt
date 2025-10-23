@@ -11,3 +11,4 @@ sealed class StateView<T>(
 
     class Sucess<T>(data: T, message: String? = null) : StateView<T>(data = data, message = message)
 }
+//

@@ -99,6 +99,7 @@ class RegisterFragment : Fragment() {
                 is StateView.Error -> {
                     binding.progressBar.isVisible = false
                     showBottomSheet(message = getString(R.string.criateError))
+                    //arrumar essa validação
                 }
             }
 
