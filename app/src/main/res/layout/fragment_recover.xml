@@ -29,7 +29,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Recuperar senha"
+                    android:text="@string/recover_password"
                     android:textColor="@color/color_default" />
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="24dp"
             android:gravity="center"
-            android:text="Digite seu e-mail e clique em enviar para receber um link de recuperação de senha."
+            android:text="@string/recover_link"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="E-mail"
+                android:text="@string/email_hint"
                 android:textColor="@color/color_default"
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="180dp" />
@@ -74,7 +74,7 @@
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
-                android:hint="Digite seu e-mail"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress"
                 android:padding="8dp"
                 android:textColorHint="@color/color_hint"
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="@drawable/bg_btn"
-                android:text="Enviar"
+                android:text="@string/Bottom_send"
                 app:backgroundTint="@null"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

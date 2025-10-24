@@ -30,7 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="Criar Conta"
+                    android:text="@string/create_account"
                     android:textColor="@color/color_default" />
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
@@ -47,7 +47,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nome"
+                android:text="@string/local_name"
                 android:textColor="@color/color_default"
                 tools:layout_editor_absoluteX="25dp"
                 tools:layout_editor_absoluteY="100dp" />
@@ -60,7 +60,7 @@
                 android:drawableStart="@drawable/ic_person"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
-                android:hint="Digite seu nome"
+                android:hint="@string/enter_name"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="126dp" />
@@ -68,7 +68,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="E-mail"
+                android:text="@string/local_e_mail"
                 android:layout_marginTop="16dp"
                 android:textColor="@color/color_default"
                 tools:layout_editor_absoluteX="24dp"
@@ -82,7 +82,7 @@
                 android:drawableStart="@drawable/ic_email"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
-                android:hint="Digite seu e-mail"
+                android:hint="@string/enter_email"
                 android:inputType="textEmailAddress"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="24dp"
@@ -91,7 +91,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Telenone"
+                android:text="@string/local_mobile_phone"
                 android:layout_marginTop="16dp"
                 android:textColor="@color/color_default"
                 tools:layout_editor_absoluteX="24dp"
@@ -105,7 +105,7 @@
                 android:drawableStart="@drawable/ic_mobile"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
-                android:hint="Digite seu telefone"
+                android:text="@string/enter_mobile_phone"
                 android:inputType="phone"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="24dp"
@@ -114,7 +114,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Senha"
+                android:text="@string/local_password"
                 android:layout_marginTop="16dp"
                 android:textColor="@color/color_default"
                 tools:layout_editor_absoluteX="24dp"
@@ -128,7 +128,7 @@
                 android:drawableStart="@drawable/ic_key"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
-                android:hint="Digite uma senha"
+                android:hint="@string/enter_password"
                 android:inputType="textPassword"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="24dp"
@@ -137,7 +137,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Confirme a senha"
+                android:text="@string/local_confirm_password"
                 android:layout_marginTop="16dp"
                 android:textColor="@color/color_default"
                 tools:layout_editor_absoluteX="24dp"
@@ -151,7 +151,7 @@
                 android:drawableStart="@drawable/ic_key"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/color_default"
-                android:hint="Confirme a senha"
+                android:hint="@string/confirm_password"
                 android:inputType="textPassword"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="16dp"
@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_btn"
                 android:layout_marginTop="16dp"
-                android:text="Enviar"
+                android:text="@string/bottom_send"
                 app:backgroundTint="@null"
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="465dp" />

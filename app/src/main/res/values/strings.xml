@@ -2,26 +2,46 @@
     <string name="app_name">Banco Digital</string>
 
     <!-- BottomSheet -->
-    <string name="textTittleBottomSheet">Atenção</string>
-    <string name="textButtonBottomSheet">Entendi</string>
+    <string name="textTittleBottomSheet">Attention</string>
+    <string name="textButtonBottomSheet">Understood</string>
+
     <!-- Generic -->
-    <string name="name">Digite seu nome</string>
-    <string name="email">Digite o seu email</string>
-    <string name="emailSucess">Email enviado com sucesso</string>
-    <string name="mobileNumber">Digite o seu número de telefone</string>
-    <string name="password">Crie a sua senha</string>
-    <string name="confirmPassword">Confirme a sua senha</string>
-    <string name="criateError">Erro ao cadastrar, insira informações válidas</string>
-    <string name="criateSucess">Cadastro realizado com sucesso</string>
-    <string name="emailOrPasswordError">Email ou senha inválido</string>
+    <string name="enter_name">Enter your name.</string>
+    <string name="enter_email">Enter your e-mail.</string>
+    <string name="email_success">E-mail sent successfully.</string>
+    <string name="mobile_number">Enter your mobile phone number.</string>
+    <string name="create_password">Create your password.</string>
+    <string name="confirm_password">Confirm your password.</string>
+    <string name="create_error">Error registering, enter valid information.</string>
+    <string name="create_success">Registration completed successfully.</string>
+    <string name="email_or_password_error">Invalid e-mail or password.</string>
 
     <!-- Login -->
-    <string name="enterPassword">Digite a sua senha</string>
+    <string name="enter_password">Enter your password.</string>
+    <string name="email_hint">Enter your e-mail</string>
+    <string name="local_password">Password</string>
+    <string name="login_bottom">Login</string>
+    <string name="create_account">Create account</string>
+    <string name="recover_account">Recover Account</string>
 
-    <!--    Erros Firebase Authentication-->
-    <string name="account_not_registered_register_fragment">Nenhuma conta encontrada com este e-mail.</string>
-    <string name="invalid_email_register_fragment">Insira um e-mail válido.</string>
-    <string name="invalid_password_register_fragment">Senha inválida, tente novamente.</string>
-    <string name="email_in_use_register_fragment">Este e-mail já está em uso.</string>
-    <string name="strong_password_register_fragment">Insira uma senha mais forte.</string>
+    <!--    Errors Firebase Authentication-->
+    <string name="account_not_registered_register_fragment">No account found with this e-mail.</string>
+    <string name="invalid_email_register_fragment">Enter a valid e-mail.</string>
+    <string name="invalid_password_register_fragment">Invalid password, try again.</string>
+    <string name="email_in_use_register_fragment">This e-mail is already in use.</string>
+    <string name="strong_password_register_fragment">Enter a stronger password.</string>
+
+    <!--    Recover-->
+    <string name="recover_password">Recover password</string>
+    <string name="recover_link">Enter your e-mail and click submit to receive a password recover link</string>
+    <string name="bottom_send">Send</string>
+
+    <!--    Create account-->
+    <string name="local_name">Name</string>
+    <string name="local_e_mail">E-mail</string>
+    <string name="local_mobile_phone">Mobile phone</string>
+    <string name="enter_mobile_phone">Enter your mobile phone</string>
+    <string name="local_confirm_password">Confirm your password</string>
+
+
 </resources>
