@@ -97,7 +97,7 @@
                 tools:layout_editor_absoluteX="24dp"
                 tools:layout_editor_absoluteY="249dp" />
 
-            <EditText
+            <com.vicmikhailau.maskededittext.MaskedEditText
                 android:id="@+id/edtMobileNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -109,6 +109,7 @@
                 android:inputType="phone"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="24dp"
+                app:mask="(+##) ### ### ###"
                 tools:layout_editor_absoluteY="268dp" />
 
             <TextView

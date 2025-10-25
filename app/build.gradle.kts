@@ -76,4 +76,8 @@ dependencies {
     val hilt_version = "2.52"
     implementation("com.google.dagger:hilt-android:$hilt_version")
     ksp("com.google.dagger:hilt-compiler:$hilt_version")
+
+    //mask edittext
+    //https://github.com/VicMikhailau/MaskedEditText
+    implementation("io.github.vicmikhailau:MaskedEditText:5.0.3")
 }
