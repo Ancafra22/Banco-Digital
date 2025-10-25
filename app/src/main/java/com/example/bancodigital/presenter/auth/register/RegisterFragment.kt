@@ -65,20 +65,20 @@ class RegisterFragment : Fragment() {
                             registerUser(user)
 
                         }else{
-                            showBottomSheet(message = getString(R.string.confirmPassword))
+                            showBottomSheet(message = getString(R.string.confirm_password))
                         }
                     }else{
-                        showBottomSheet(message = getString(R.string.password))
+                        showBottomSheet(message = getString(R.string.enter_password))
                     }
 
                 }else{
-                    showBottomSheet(message = getString(R.string.mobileNumber))
+                    showBottomSheet(message = getString(R.string.enter_mobile_phone))
                 }
             } else {
-                showBottomSheet(message = getString(R.string.email))
+                showBottomSheet(message = getString(R.string.enter_email))
             }
         } else {
-            showBottomSheet(message = getString(R.string.name))
+            showBottomSheet(message = getString(R.string.enter_name))
         }
     }
 

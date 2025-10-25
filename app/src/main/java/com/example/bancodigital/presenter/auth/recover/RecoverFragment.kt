@@ -52,7 +52,7 @@ class RecoverFragment : Fragment() {
         if (email.isNotEmpty()) {
             recoverAccount(email)
         } else {
-            showBottomSheet(message = getString(R.string.email))
+            showBottomSheet(message = getString(R.string.enter_email))
         }
     }
 
@@ -68,12 +68,12 @@ class RecoverFragment : Fragment() {
                 is StateView.Sucess -> {
                     binding.progressBar.isVisible = false
 
-                    showBottomSheet(message = getString(R.string.emailSucess))
+                    showBottomSheet(message = getString(R.string.email_success))
                 }
 
                 is StateView.Error -> {
                     binding.progressBar.isVisible = false
-                    showBottomSheet(message = getString(R.string.emailOrPasswordError))
+                    showBottomSheet(message = getString(R.string.email_or_password_error))
                 }
             }
 

@@ -68,11 +68,11 @@ class LoginFragment : Fragment() {
 
             } else {
 
-                showBottomSheet(message = getString(R.string.enterPassword))
+                showBottomSheet(message = getString(R.string.enter_password))
 
             }
         } else {
-            showBottomSheet(message = getString(R.string.email))
+            showBottomSheet(message = getString(R.string.enter_email))
         }
     }
 
