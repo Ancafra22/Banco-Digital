@@ -109,7 +109,7 @@
                 android:inputType="phone"
                 android:padding="8dp"
                 tools:layout_editor_absoluteX="24dp"
-                app:mask="(+##) ### ### ###"
+                app:mask="### ### ###"
                 tools:layout_editor_absoluteY="268dp" />
 
             <TextView

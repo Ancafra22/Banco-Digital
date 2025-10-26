@@ -41,37 +41,45 @@ class RegisterFragment : Fragment() {
     }
 
     //função de evento de clique do botão enviar
-    private fun initListeners (){
+    private fun initListeners() {
         binding.btnSend.setOnClickListener {
             validadeData()
         }
     }
+
     //função para recuperar e validar os dados digitados pelo usuário
     private fun validadeData() {
         //recuperando os dados digitados, tranformando em string e retirando os espaços em branco
         val name = binding.edtName.text.toString().trim()
         val email = binding.edtEmail.text.toString().trim()
-        val mobileNumber = binding.edtMobileNumber.text.toString().trim()
+        val mobileNumber = binding.edtMobileNumber.unMaskedText
         val password = binding.edtPassword.text.toString().trim()
         val confirmPassword = binding.edtConfirmPassword.text.toString().trim()
 
         if (name.isNotEmpty()) {
             if (email.isNotEmpty()) {
-                if (mobileNumber.isNotEmpty()){
-                    if (password.isNotEmpty()){
-                        if (confirmPassword.isNotEmpty()){
+                if (mobileNumber?.isNotEmpty() == true) {
 
-                            val user = User(name, email, mobileNumber, password, confirmPassword)
-                            registerUser(user)
+                    if (mobileNumber.length == 9) {
 
-                        }else{
-                            showBottomSheet(message = getString(R.string.confirm_password))
+                        if (password.isNotEmpty()) {
+                            if (confirmPassword.isNotEmpty()) {
+
+                                val user =
+                                    User(name, email, mobileNumber, password, confirmPassword)
+                                registerUser(user)
+
+                            } else {
+                                showBottomSheet(message = getString(R.string.confirm_password))
+                            }
+                        } else {
+                            showBottomSheet(message = getString(R.string.enter_password))
                         }
-                    }else{
-                        showBottomSheet(message = getString(R.string.enter_password))
-                    }
 
-                }else{
+                    } else {
+                        showBottomSheet(message = getString(R.string.local_mobile_phone_invalid))
+                    }
+                } else {
                     showBottomSheet(message = getString(R.string.enter_mobile_phone))
                 }
             } else {

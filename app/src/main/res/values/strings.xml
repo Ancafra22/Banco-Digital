@@ -40,6 +40,7 @@
     <string name="local_name">Name</string>
     <string name="local_e_mail">E-mail</string>
     <string name="local_mobile_phone">Mobile phone</string>
+    <string name="local_mobile_phone_invalid">Invalid mobile phone</string>
     <string name="enter_mobile_phone">Enter your mobile phone</string>
     <string name="local_confirm_password">Confirm your password</string>
 
