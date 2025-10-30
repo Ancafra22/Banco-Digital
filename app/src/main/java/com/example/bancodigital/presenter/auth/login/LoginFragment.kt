@@ -57,7 +57,7 @@ class LoginFragment : Fragment() {
 
     //função para recuperar e validar os dados digitados pelo usuário
     private fun validateData() {
-        //recuperando os dados digitados, tranformando em string e retirando os espaços em branco
+
         val email = binding.edtEmail.text.toString().trim()
         val password = binding.edtPassword.text.toString().trim()
 
