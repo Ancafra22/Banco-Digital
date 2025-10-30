@@ -103,7 +103,6 @@ class RegisterFragment : Fragment() {
 
                 is StateView.Sucess -> {
                     saveProfile(user)
-                    findNavController().navigate(R.id.action_global_homeFragment)
 
                 }
 
