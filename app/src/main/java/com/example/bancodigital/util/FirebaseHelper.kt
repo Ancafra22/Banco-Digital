@@ -7,6 +7,8 @@ class FirebaseHelper {
     companion object {
         fun isAuthenticated() = FirebaseAuth.getInstance().currentUser != null
 
+        fun getUserId() = FirebaseAuth.getInstance().currentUser?.uid ?: ""
+
         fun validError(error: String): Int {
             return when {
                 error.contains("There is no user record corresponding to this identifier") -> {

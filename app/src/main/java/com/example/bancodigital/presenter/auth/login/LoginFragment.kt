@@ -45,7 +45,7 @@ class LoginFragment : Fragment() {
     //função de evento de clique do botão enviar
     private fun initListeners() {
         binding.btnLogin.setOnClickListener {
-            validadeData()
+            validateData()
         }
         binding.textRegister.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment_to_registerFragment)
@@ -56,7 +56,7 @@ class LoginFragment : Fragment() {
     }
 
     //função para recuperar e validar os dados digitados pelo usuário
-    private fun validadeData() {
+    private fun validateData() {
         //recuperando os dados digitados, tranformando em string e retirando os espaços em branco
         val email = binding.edtEmail.text.toString().trim()
         val password = binding.edtPassword.text.toString().trim()
