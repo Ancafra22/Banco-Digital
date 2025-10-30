@@ -45,12 +45,12 @@ class RegisterFragment : Fragment() {
     //função de evento de clique do botão enviar
     private fun initListeners() {
         binding.btnSend.setOnClickListener {
-            validadeData()
+            validateData()
         }
     }
 
     //função para recuperar e validar os dados digitados pelo usuário
-    private fun validadeData() {
+    private fun validateData() {
         //recuperando os dados digitados, tranformando em string e retirando os espaços em branco
         val name = binding.edtName.text.toString().trim()
         val email = binding.edtEmail.text.toString().trim()
