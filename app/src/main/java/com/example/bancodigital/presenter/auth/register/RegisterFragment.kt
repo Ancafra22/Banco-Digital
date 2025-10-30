@@ -67,8 +67,9 @@ class RegisterFragment : Fragment() {
                         if (password.isNotEmpty()) {
                             if (confirmPassword.isNotEmpty()) {
 
+
                                 val user =
-                                    User(name, email, mobileNumber, password, confirmPassword)
+                                    User("", name, email, mobileNumber, password, confirmPassword)
                                 registerUser(user)
 
                             } else {
