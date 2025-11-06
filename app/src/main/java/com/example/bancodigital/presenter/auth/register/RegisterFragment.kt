@@ -54,23 +54,21 @@ class RegisterFragment : Fragment() {
         //recuperando os dados digitados, tranformando em string e retirando os espaços em branco
         val name = binding.edtName.text.toString().trim()
         val email = binding.edtEmail.text.toString().trim()
-        val mobileNumber = binding.edtMobileNumber.unMaskedText
+        val mobilePhone = binding.edtMobileNumber.unMaskedText
         val password = binding.edtPassword.text.toString().trim()
         val confirmPassword = binding.edtConfirmPassword.text.toString().trim()
 
         if (name.isNotEmpty()) {
             if (email.isNotEmpty()) {
-                if (mobileNumber?.isNotEmpty() == true) {
+                if (mobilePhone?.isNotEmpty() == true) {
 
-                    if (mobileNumber.length == 9) {
+                    if (mobilePhone.length == 9) {
 
                         if (password.isNotEmpty()) {
                             if (confirmPassword.isNotEmpty()) {
 
 
-                                val user =
-                                    User("", name, email, mobileNumber, password, confirmPassword)
-                                registerUser(user)
+                                registerUser(name, email, mobilePhone, password)
 
                             } else {
                                 showBottomSheet(message = getString(R.string.confirm_password))
@@ -93,9 +91,14 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    private fun registerUser(user: User) {
-
-        registerViewModel.register(user).observe(viewLifecycleOwner) { stateView ->
+    private fun registerUser(
+        name: String,
+        email: String,
+        mobilePhone: String,
+        password: String
+    ) {
+        registerViewModel.register(name, email, mobilePhone, password)
+            .observe(viewLifecycleOwner) { stateView ->
 
             when (stateView) {
                 is StateView.Loading -> {
@@ -103,8 +106,7 @@ class RegisterFragment : Fragment() {
                 }
 
                 is StateView.Sucess -> {
-                    saveProfile(user)
-                    findNavController().navigate(R.id.action_global_homeFragment)
+                    stateView.data?.let { saveProfile(it) }
                 }
 
                 is StateView.Error -> {

@@ -2,7 +2,6 @@ package com.example.bancodigital.presenter.auth.register
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.example.bancodigital.data.model.User
 import com.example.bancodigital.domain.auth.RegisterUsecase
 import com.example.bancodigital.util.StateView
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -13,11 +12,16 @@ import javax.inject.Inject
 class RegisterViewModel @Inject constructor(
     private val registerUsecase: RegisterUsecase
 ) : ViewModel() {
-    fun register(user: User) = liveData(Dispatchers.IO) {
+    fun register(
+        name: String,
+        email: String,
+        mobilePhone: String,
+        password: String
+    ) = liveData(Dispatchers.IO) {
         try {
             emit(StateView.Loading())
 
-            registerUsecase.invoke(user)
+            val user = registerUsecase.invoke(name, email, mobilePhone, password)
             emit(StateView.Sucess(user))
 
         } catch (ex: Exception) {
