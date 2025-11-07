@@ -106,7 +106,10 @@ class RegisterFragment : Fragment() {
                 }
 
                 is StateView.Sucess -> {
-                    stateView.data?.let { saveProfile(it) }
+                    stateView.data?.let {
+                        saveProfile(it)
+                        findNavController().navigate(R.id.action_global_homeFragment)
+                    }
                 }
 
                 is StateView.Error -> {
@@ -135,8 +138,6 @@ class RegisterFragment : Fragment() {
 
                 is StateView.Sucess -> {
                     binding.progressBar.isVisible = false
-                    findNavController().navigate(R.id.action_global_homeFragment)
-
                 }
 
                 is StateView.Error -> {

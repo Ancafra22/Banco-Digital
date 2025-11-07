@@ -6,9 +6,9 @@ import com.google.firebase.database.FirebaseDatabase
 import javax.inject.Inject
 import kotlin.coroutines.suspendCoroutine
 
-class ProfileRepositoryImpl @Inject constructor(
+class ProfileDataSourceImpl @Inject constructor(
     database: FirebaseDatabase
-) : ProfileRepository {
+) : ProfileDataSource {
 
     private val profileReference = database.reference
         .child("profile")
