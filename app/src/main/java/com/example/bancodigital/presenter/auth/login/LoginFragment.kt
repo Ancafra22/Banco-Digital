@@ -42,7 +42,7 @@ class LoginFragment : Fragment() {
 
     }
 
-    //função de evento de clique do botão enviar
+    //Submit button click event function
     private fun initListeners() {
         binding.btnLogin.setOnClickListener {
             validateData()
@@ -55,7 +55,7 @@ class LoginFragment : Fragment() {
         }
     }
 
-    //função para recuperar e validar os dados digitados pelo usuário
+    //function to recover and validate data typed by users
     private fun validateData() {
 
         val email = binding.edtEmail.text.toString().trim()
