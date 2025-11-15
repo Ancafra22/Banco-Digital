@@ -5,10 +5,10 @@ import com.example.bancodigital.data.repository.profile.ProfileDataSourceImpl
 import javax.inject.Inject
 
 class SaveProfileUseCase @Inject constructor(
-    private val profileRepositoryImpl: ProfileDataSourceImpl
+    private val profileDataSourceImpl: ProfileDataSourceImpl
 ) {
 
     suspend operator fun invoke(user: User) {
-        return profileRepositoryImpl.saveProfile(user)
+        return profileDataSourceImpl.saveProfile(user)
     }
 }
