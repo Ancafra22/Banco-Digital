@@ -5,9 +5,9 @@ import com.example.bancodigital.data.repository.profile.wallet.WalletDataSourceI
 import javax.inject.Inject
 
 class InitWalletUseCase @Inject constructor(
-    private val walletDataSourceImpl: WalletDataSourceImpl
+    private val walletDataSourceImp: WalletDataSourceImpl
 ) {
     suspend operator fun invoke(wallet: Wallet) {
-        return walletDataSourceImpl.initWallet(wallet)
+        return walletDataSourceImp.initWallet(wallet)
     }
 }

@@ -10,7 +10,7 @@ plugins {
 
 android {
     namespace = "com.example.bancodigital"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.bancodigital"
@@ -51,8 +51,8 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("androidx.constraintlayout:constraintlayout:2.2.0")
-    implementation(libs.androidx.navigation.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.navigation.ui.ktx)
+    //implementation(libs.androidx.navigation.navigation.fragment.ktx)
+    //implementation(libs.androidx.navigation.navigation.ui.ktx)
 
     // Testes
     testImplementation("junit:junit:4.13.2")
@@ -65,7 +65,7 @@ dependencies {
     implementation("com.google.firebase:firebase-database-ktx")
 
     // Navigation
-    val nav_version = "2.8.4"
+    val nav_version = "2.9.6"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
 
