@@ -10,7 +10,8 @@ interface AuthFirebaseDataSource {
         name: String,
         email: String,
         mobilePhone: String,
-        password: String
+        password: String,
+        confirmPassword: String
     ): User
 
     suspend fun recover(email: String)

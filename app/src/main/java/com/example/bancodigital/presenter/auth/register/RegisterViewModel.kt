@@ -16,12 +16,13 @@ class RegisterViewModel @Inject constructor(
         name: String,
         email: String,
         mobilePhone: String,
-        password: String
+        password: String,
+        confirmPassword: String
     ) = liveData(Dispatchers.IO) {
         try {
             emit(StateView.Loading())
 
-            val user = registerUseCase.invoke(name, email, mobilePhone, password)
+            val user = registerUseCase.invoke(name, email, mobilePhone, password, confirmPassword)
             emit(StateView.Sucess(user))
 
         } catch (ex: Exception) {

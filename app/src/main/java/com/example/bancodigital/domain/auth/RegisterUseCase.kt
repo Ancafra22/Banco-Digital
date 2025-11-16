@@ -11,8 +11,15 @@ class RegisterUseCase @Inject constructor(
         name: String,
         email: String,
         mobilePhone: String,
-        password: String
+        password: String,
+        confirmPassword: String
     ): User {
-        return authFirebaseDataSourceImpl.register(name, email, mobilePhone, password)
+        return authFirebaseDataSourceImpl.register(
+            name,
+            email,
+            mobilePhone,
+            password,
+            confirmPassword
+        )
     }
 }

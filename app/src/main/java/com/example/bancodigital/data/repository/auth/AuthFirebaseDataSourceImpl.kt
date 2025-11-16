@@ -28,7 +28,8 @@ class AuthFirebaseDataSourceImpl @Inject constructor(
         name: String,
         email: String,
         mobilePhone: String,
-        password: String
+        password: String,
+        confirmPassword: String
     ): User {
         return suspendCoroutine { continuation ->
             firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -41,7 +42,8 @@ class AuthFirebaseDataSourceImpl @Inject constructor(
                             name = name,
                             email = email,
                             mobilePhone = mobilePhone,
-                            password = password
+                            password = password,
+                            confirmPassword = confirmPassword
                         )
 
                         continuation.resumeWith(Result.success(user))

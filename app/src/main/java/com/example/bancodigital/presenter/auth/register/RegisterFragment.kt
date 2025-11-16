@@ -71,7 +71,7 @@ class RegisterFragment : Fragment() {
                             if (confirmPassword.isNotEmpty()) {
 
 
-                                registerUser(name, email, mobilePhone, password)
+                                registerUser(name, email, mobilePhone, password, confirmPassword)
 
                             } else {
                                 showBottomSheet(message = getString(R.string.confirm_password))
@@ -98,9 +98,10 @@ class RegisterFragment : Fragment() {
         name: String,
         email: String,
         mobilePhone: String,
-        password: String
+        password: String,
+        confirmPassword: String
     ) {
-        registerViewModel.register(name, email, mobilePhone, password)
+        registerViewModel.register(name, email, mobilePhone, password, confirmPassword)
             .observe(viewLifecycleOwner) { stateView ->
 
             when (stateView) {
