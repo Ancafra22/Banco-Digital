@@ -2,7 +2,7 @@ package com.example.bancodigital.presenter.auth.register
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
-import com.example.bancodigital.domain.auth.RegisterUsecase
+import com.example.bancodigital.domain.auth.RegisterUseCase
 import com.example.bancodigital.util.StateView
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RegisterViewModel @Inject constructor(
-    private val registerUsecase: RegisterUsecase
+    private val registerUseCase: RegisterUseCase
 ) : ViewModel() {
     fun register(
         name: String,
@@ -21,7 +21,7 @@ class RegisterViewModel @Inject constructor(
         try {
             emit(StateView.Loading())
 
-            val user = registerUsecase.invoke(name, email, mobilePhone, password)
+            val user = registerUseCase.invoke(name, email, mobilePhone, password)
             emit(StateView.Sucess(user))
 
         } catch (ex: Exception) {
