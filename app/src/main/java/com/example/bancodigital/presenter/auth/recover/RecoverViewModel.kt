@@ -17,7 +17,7 @@ class RecoverViewModel @Inject constructor(
             emit(StateView.Loading())
 
             recoverUsecase.invoke(email)
-            emit(StateView.Sucess(null))
+            emit(StateView.Success(null))
 
         } catch (ex: Exception) {
             emit(StateView.Error(ex.message))

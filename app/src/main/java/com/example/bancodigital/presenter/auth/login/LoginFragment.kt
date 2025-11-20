@@ -85,7 +85,7 @@ class LoginFragment : Fragment() {
                     binding.progressBar.isVisible = true
                 }
 
-                is StateView.Sucess -> {
+                is StateView.Success -> {
                     binding.progressBar.isVisible = false
 
                     findNavController().navigate(R.id.action_global_homeFragment)

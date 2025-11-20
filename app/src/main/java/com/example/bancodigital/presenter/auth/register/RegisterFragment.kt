@@ -109,7 +109,7 @@ class RegisterFragment : Fragment() {
                     binding.progressBar.isVisible = true
                 }
 
-                is StateView.Sucess -> {
+                is StateView.Success -> {
                     stateView.data?.let {
                         saveProfile(it)
                     }
@@ -139,7 +139,7 @@ class RegisterFragment : Fragment() {
 
                 }
 
-                is StateView.Sucess -> {
+                is StateView.Success -> {
                     initWallet()
                 }
 
@@ -171,7 +171,7 @@ class RegisterFragment : Fragment() {
 
                 }
 
-                is StateView.Sucess -> {
+                is StateView.Success -> {
                     binding.progressBar.isVisible = false
                     findNavController().navigate(R.id.action_global_homeFragment)
                 }

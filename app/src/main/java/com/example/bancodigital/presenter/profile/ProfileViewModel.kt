@@ -19,7 +19,7 @@ class ProfileViewModel @Inject constructor(
 
             saveProfileUseCase.invoke(user)
 
-            emit(StateView.Sucess(null))
+            emit(StateView.Success(null))
 
         } catch (ex: Exception) {
             emit(StateView.Error(ex.message))

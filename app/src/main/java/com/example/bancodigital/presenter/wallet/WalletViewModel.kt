@@ -19,7 +19,7 @@ class WalletViewModel @Inject constructor(
             emit(StateView.Loading())
 
             initWalletUseCase.invoke(wallet)
-            emit(StateView.Sucess(null))
+            emit(StateView.Success(null))
 
         } catch (ex: Exception) {
             emit(StateView.Error(ex.message))

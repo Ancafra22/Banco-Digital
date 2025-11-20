@@ -65,7 +65,7 @@ class RecoverFragment : Fragment() {
                     binding.progressBar.isVisible = true
                 }
 
-                is StateView.Sucess -> {
+                is StateView.Success -> {
                     binding.progressBar.isVisible = false
 
                     showBottomSheet(message = getString(R.string.email_success))

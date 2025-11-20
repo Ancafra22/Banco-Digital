@@ -23,7 +23,7 @@ class RegisterViewModel @Inject constructor(
             emit(StateView.Loading())
 
             val user = registerUseCase.invoke(name, email, mobilePhone, password, confirmPassword)
-            emit(StateView.Sucess(user))
+            emit(StateView.Success(user))
 
         } catch (ex: Exception) {
             emit(StateView.Error(ex.message))
