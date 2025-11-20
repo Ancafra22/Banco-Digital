@@ -10,13 +10,13 @@ import javax.inject.Inject
 
 @HiltViewModel
 class LoginViewModel @Inject constructor(
-    private val loginUsecase: LoginUseCase
+    private val loginUseCase: LoginUseCase
 ) : ViewModel() {
     fun login(email: String, password: String) = liveData(Dispatchers.IO) {
         try {
             emit(StateView.Loading())
 
-            loginUsecase.invoke(email, password)
+            loginUseCase.invoke(email, password)
             emit(StateView.Sucess(null))
 
         } catch (ex: Exception) {
