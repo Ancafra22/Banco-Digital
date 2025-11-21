@@ -1,9 +1,9 @@
-<svg height="24"
-    viewBox="0 0 24 24"
-    width="24"
-    xmlns="http://www.w3.org/2000/svg">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
     <path
-        d="M0 0h24v24H0z"
-        fill="none" />
-    <path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2V4H5v16h14zM8 7h8v2H8V7zm0 4h8v2H8v-2zm0 4h8v2H8v-2z" />
-</svg>
+        android:fillColor="#FF000000"
+        android:pathData="M20,22L4,22a1,1 0,0 1,-1 -1L3,3a1,1 0,0 1,1 -1h16a1,1 0,0 1,1 1v18a1,1 0,0 1,-1 1zM19,20L19,4L5,4v16h14zM8,7h8v2L8,9L8,7zM8,11h8v2L8,13v-2zM8,15h8v2L8,17v-2z" />
+</vector>
