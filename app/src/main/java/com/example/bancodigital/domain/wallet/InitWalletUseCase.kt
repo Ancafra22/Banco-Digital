@@ -1,7 +1,7 @@
 package com.example.bancodigital.domain.wallet
 
 import com.example.bancodigital.data.model.Wallet
-import com.example.bancodigital.data.repository.profile.wallet.WalletDataSourceImpl
+import com.example.bancodigital.data.repository.wallet.WalletDataSourceImpl
 import javax.inject.Inject
 
 class InitWalletUseCase @Inject constructor(

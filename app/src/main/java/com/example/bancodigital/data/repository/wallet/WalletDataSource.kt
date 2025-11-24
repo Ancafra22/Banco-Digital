@@ -1,4 +1,4 @@
-package com.example.bancodigital.data.repository.profile.wallet
+package com.example.bancodigital.data.repository.wallet
 
 import com.example.bancodigital.data.model.Wallet
 
