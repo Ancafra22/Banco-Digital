@@ -15,6 +15,7 @@
     <string name="create_error">Error registering, enter valid information.</string>
     <string name="create_success">Registration completed successfully.</string>
     <string name="email_or_password_error">Invalid e-mail or password.</string>
+    <string name="generic_error">An error occurred, try again later.</string>
 
     <!-- Login -->
     <string name="enter_password">Enter your password.</string>

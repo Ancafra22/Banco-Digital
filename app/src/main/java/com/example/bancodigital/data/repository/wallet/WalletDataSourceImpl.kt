@@ -1,7 +1,11 @@
 package com.example.bancodigital.data.repository.wallet
 
 import com.example.bancodigital.data.model.Wallet
+import com.example.bancodigital.util.FirebaseHelper
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import javax.inject.Inject
 import kotlin.coroutines.suspendCoroutine
 
@@ -15,7 +19,7 @@ class WalletDataSourceImpl @Inject constructor(
     override suspend fun initWallet(wallet: Wallet) {
         return suspendCoroutine { continuation ->
             walletReference
-                .child(wallet.id)
+                .child(FirebaseHelper.getUserId())
                 .setValue(wallet).addOnCompleteListener { task ->
 
                     if (task.isSuccessful) {
@@ -29,5 +33,25 @@ class WalletDataSourceImpl @Inject constructor(
 
                 }
         }
+    }
+
+    override suspend fun getWallet(): Wallet {
+        return suspendCoroutine { continuation ->
+            walletReference
+                .child(FirebaseHelper.getUserId())
+            walletReference.addListenerForSingleValueEvent(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    val wallet = snapshot.getValue(Wallet::class.java)
+                    wallet?.let { continuation.resumeWith(Result.success(it)) }
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    continuation.resumeWith(Result.failure(error.toException()))
+                }
+
+            })
+
+        }
+
     }
 }
