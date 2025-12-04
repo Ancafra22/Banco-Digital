@@ -52,6 +52,7 @@
     <string name="balance">Balance</string>
     <string name="lasted_activities">Lasted activities</string>
     <string name="see_more">See more</string>
+    <string name="todo">TODO</string>
 
 
 </resources>

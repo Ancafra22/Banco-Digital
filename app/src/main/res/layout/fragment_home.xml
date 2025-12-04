@@ -31,7 +31,8 @@
                 <ImageView
                     android:id="@+id/imageUser"
                     android:layout_width="80dp"
-                    android:layout_height="80dp" />
+                    android:layout_height="80dp"
+                    android:contentDescription="@string/todo" />
 
             </com.google.android.material.card.MaterialCardView>
 
