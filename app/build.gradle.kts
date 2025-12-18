@@ -65,21 +65,21 @@ dependencies {
     implementation("com.google.firebase:firebase-database-ktx")
 
     // Navigation
-    val nav_version = "2.9.6"
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    val navVersion = "2.9.6"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
-    val lifecycle_version = "2.9.4"
+    val lifecycleVersion = "2.9.4"
     // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle_version}")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:${lifecycle_version}")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycleVersion}")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:${lifecycleVersion}")
 
     // Hilt + KSP
-    val hilt_version = "2.52"
-    implementation("com.google.dagger:hilt-android:$hilt_version")
-    ksp("com.google.dagger:hilt-compiler:$hilt_version")
+    val hiltVersion = "2.52"
+    implementation("com.google.dagger:hilt-android:$hiltVersion")
+    ksp("com.google.dagger:hilt-compiler:$hiltVersion")
 
     //mask edittext
     //https://github.com/VicMikhailau/MaskedEditText
-    implementation("io.github.vicmikhailau:MaskedEditText:5.0.3")
+    implementation(libs.maskededittext)
 }
