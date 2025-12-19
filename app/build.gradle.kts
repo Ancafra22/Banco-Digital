@@ -1,3 +1,5 @@
+@file:Suppress("MISSING_DEPENDENCY_SUPERCLASS_WARNING")
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -52,6 +54,8 @@ dependencies {
     implementation(libs.material.v1120)
     implementation(libs.androidx.constraintlayout.v220)
     implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.animated.vector.drawable)
+    implementation(libs.google.firebase.database.ktx)
     //implementation(libs.androidx.navigation.navigation.ui.ktx)
 
     // Testes
